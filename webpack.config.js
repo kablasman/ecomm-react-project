@@ -27,7 +27,7 @@ module.exports = {
 		})
 	], 
 	devServer: {
-		port: 4000,
+		port: 8080,
 		historyApiFallback: {
 			index: `index.html`
 		}
@@ -37,7 +37,7 @@ module.exports = {
     }, 
 	resolve: {
 		alias: {
-			components: path.resolve(__dirname, 'src/components'),
+			components: path.resolve(__dirname, 'src/components/'),
 			css: path.resolve(__dirname, 'src/css/'),
 			img: path.resolve(__dirname, 'src/img/'),
 		}

@@ -5,7 +5,7 @@ body {
     background-image: url('./../img/bg.png');
 }
 
-*,
+/* *,
 *::before,
 *::after {
 	box-sizing: border-box;
@@ -61,4 +61,4 @@ body {
 	font-size: 1em;
 	border-radius: 0;
 	line-height: 1;
-}
+} */
