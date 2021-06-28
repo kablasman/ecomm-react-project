@@ -3,8 +3,8 @@ import React from 'react'
 const Header = () => {
     return (
       <header className="page-header">
-			<div>
-				<a href="index.html" className="logo"> <img src="img/booknook_logo.svg" alt="book logo" width="200" /></a>
+			<div className="logo">
+				<a href="index.html"> <img src="src/img/booknook_logo.svg" alt="book logo" width="150" /></a>
 			</div>
 
 			<nav aria-label="Primary" className="navigation">
