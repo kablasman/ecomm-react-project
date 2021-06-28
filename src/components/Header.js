@@ -9,7 +9,7 @@ const Header = () => {
 
 			<nav aria-label="Primary" className="navigation">
 				<div className="menu-toggle">
-					<a href="#"><img src="img/menu-toggle.svg" alt="toggle menu" width="31" /></a>
+					<a href="#"><img src="src/img/menu-toggle.svg" alt="toggle menu" width="31" /></a>
 				</div>
 				<ul className="menu">
 					<li><a href="index.html">Home</a></li>
