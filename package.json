@@ -2,6 +2,7 @@
   "name": "react-project",
   "version": "1.0.0",
   "main": "webpack.config.js",
+  "homepage":".",
   "scripts": {
     "start": "webpack serve --mode development --history-api-fallback",
     "build": "webpack --mode production"
