@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from './Header'
+import Products from 'pages/Products'
 
 const App = () => {
 	const products = [
@@ -106,7 +106,7 @@ const App = () => {
   ]
   
   return (
-    <Header/>
+    <Products data={products}/>
   )
 }
 
