@@ -66,6 +66,10 @@ h4 {
     margin-bottom: calc(var(--pad-and-gap)/3);
 }
 
+ul {
+	padding-left: 0;
+}
+
 header label img {
     padding-top: var(--pad-and-gap);
 }
@@ -218,7 +222,11 @@ form fieldset legend {
     background-size: cover;
     background-repeat: no-repeat;
     padding: var(--pad-and-gap);
-    padding-top: calc(var(--pad-and-gap)*2);
+	padding-top: calc(var(--pad-and-gap)*1.5);
+}
+
+.page-footer ul {
+	list-style-type: none;
 }
 
 .footer-grid {
@@ -552,8 +560,7 @@ form fieldset legend {
 }
 
 .book-picture {
-    border: 1px solid black;
-    box-shadow: 1px 1px 1px black;
+	border: none;
 }
 
 .sort {
