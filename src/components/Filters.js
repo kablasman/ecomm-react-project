@@ -1,32 +1,144 @@
 import React from 'react'
 
 const Filters = () => {
+
   return (
-    <form className="filters">
-      <h1>Shop by Category</h1>
-      <hr/>
-      <div className="filter-options">
+      <div class="result-filters">
+        <a><h2>Filter</h2></a>
+
+        <fieldset className="search">
+				  <input type="search" name="search" id="filterResults" autocomplete="off" />
+			  </fieldset>
+
         <fieldset>
-          <legend className="fiction"><h2>Fiction</h2></legend>
+          <legend><h3>Store</h3></legend>
+          <ul class="filter-list">
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Free Pickup Today</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Available in Store</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Ship to Destination</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
-          <legend className="non-fiction"><h2>Non-fiction</h2></legend>
+          <legend><h3>New</h3></legend>
+          <ul class="filter-list">
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Best Books of 2021</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Summer Reads</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>New This Week</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>New This Month</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Trending on #BookTok</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
-          <legend className="wellness"><h2>Health/Wellness</h2></legend>
+          <legend><h3>Bestsellers</h3></legend>
+          <ul class="filter-list">
+            <li>
+            <label class="my-checkbox">
+              <input type="checkbox"/> 
+              <span>Top 10</span>
+            </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Staff Picks</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>NYT Bestsellers</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>G&M Bestsellers</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset>
-          <legend className="teens"><h2>Teens/Pre-teens</h2></legend>
-        </fieldset>
-        <fieldset>
-          <legend className="kids"><h2>Kids 6-12</h2></legend>
-        </fieldset>
-        <fieldset>
-          <legend className="popularity"><h2>Popularity</h2></legend>
+          <legend><h3>Author</h3></legend>
+          <ul class="filter-list">
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Harry Potter</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Bridgerton</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Malcom Gladwell</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Anthony Bourdain</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Stephen King</span>
+              </label>
+            </li>
+            <li>
+              <label class="my-checkbox">
+                <input type="checkbox"/> 
+                <span>Academia</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
       </div>
-      <hr/>
-    </form>
   )
 }
 

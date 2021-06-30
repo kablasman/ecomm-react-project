@@ -9,7 +9,7 @@ const ProductArray = ({data}) => {
         <article className="product">
         <header>
             <div className="book-picture">
-                <a href="product.html"><img src={`src/img/${bookImage}`} alt={`{bookTitle}`}/></a>
+                <a href="product.html"><img src={`src/img/${bookImage}`} alt={`{bookTitle}`} /></a>
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>

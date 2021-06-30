@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const Header = () => {
+
     return (
       <header className="page-header">
 			<div className="logo">
@@ -27,10 +28,6 @@ const Header = () => {
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
-
-			<fieldset className="search">
-				<input type="search" name="search" id="filterResults" autocomplete="off" />
-			</fieldset>
 		
 			<ul className="your-products">
 				<li><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">favorite</span></a></li>
