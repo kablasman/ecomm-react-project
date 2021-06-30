@@ -28,7 +28,7 @@
     --font:  'DM Sans', sans-serif;
     --banner: 'Changa One', cursive;
     --pad-and-gap: 1em;
-}
+}	
 
 html {
     font-family: var(--font);
@@ -191,7 +191,7 @@ form fieldset legend {
     color: white;
     text-shadow: 0px 1px 3px var(--darker);
     box-shadow: 0px 0px 3px var(--darker);
-    font-family: var(--banner);
+	font-family: var(--banner);
 }
 
 .navigation {
@@ -303,7 +303,7 @@ form fieldset legend {
 }
 
 .results {
-    padding: 0 var(--pad-and-gap);
+    padding: 3em var(--pad-and-gap);
     max-width: 100em;
     margin: auto;
     margin-bottom: calc(var(--pad-and-gap)*2);
@@ -321,23 +321,36 @@ form fieldset legend {
     padding: 0.5em var(--pad-and-gap);
     border-radius: 2em;
     grid-row-start: 1;
-    grid-row-end: 5;
+	grid-row-end: 5;
 }
 
 .result-filters fieldset {
-    display: none;
+	list-style-type: none;
+	border: none;
+	display: none; 
+	padding: 0;
+	margin: 0;
+}
+
+.result-filters fieldset ul {
+	list-style-type: none;
+	margin: 0;
 }
 
 .result-filters h2 {
     padding: 0;
 }
 
-.grid-container .product {
+.book-picture img {
+	width: 200px;
+}
+
+/*.grid-container .product {
     padding: var(--pad-and-gap);
     background-color: var(--light-light-mocha);
     border-radius: 0.5em;
     box-shadow: 0px 0px 0.5em var(--darkmocha);
-}
+}*/
 
 .grid-container .product footer {
     text-align: center;
@@ -604,14 +617,14 @@ form fieldset legend {
 }
 
 .my-checkbox > input:checked {
-    /*background-image: url(../img/checkbox.svg);*/
+    background-image: url(../img/checkbox.svg);
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
 }
 
 .my-checkbox > input:hover {
-    /*background-image: url(../img/checkbox.svg);*/
+    background-image: url(../img/checkbox.svg);
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -625,7 +638,7 @@ form fieldset legend {
     display: none;
 }
 
-/*@media screen and (min-width: 28em) {
+@media screen and (min-width: 28em) {
     
     .social {
         float: right;
@@ -838,4 +851,4 @@ form fieldset legend {
     .filter-options {
         justify-content: space-around;
     }
-}*/
+}
