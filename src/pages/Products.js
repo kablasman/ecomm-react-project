@@ -40,6 +40,23 @@ const Products = ({data}) => {
     })
   }
 
+  // for sort 
+
+  const handleSortChange = ({target}) => {
+
+    let sorting
+    if (target.value === "0") {
+      sorting = (a, b) => a.bookPrice - b.bookPrice
+    } else if (target.value === "1") {
+      sorting = (a, b) => b.bookPrice - a.bookPrice
+    }
+
+    setSearchState({
+      ...searchState,
+      sort: sorting
+    })
+  }
+
   return (
     <Layout>
 
@@ -50,12 +67,20 @@ const Products = ({data}) => {
 				  <input type="search" name="search" id="filterResults" autocomplete="off" onChange={handleQueryChange} value={query}/>
 			  </fieldset>
 
+        <fieldset>
+          <label for="sort" class="sort">Show</label>
+          <select name="sort" id="sort" defaultValue="0" onChange={handleSortChange}>
+            <option value="1">Price, highest to lowest</option>
+            <option value="0">Price, lowest to highest</option>
+            <option value="newest">Newest releases</option>
+          </select>
+        </fieldset>
+
         <fieldset className="slider">
           <label htmlFor="filterPrice">Minimum Price:</label>
           <input type="range" name="price" id="filterPrice" value={minPrice} min="0" max="30" step="0.1" onChange={handlePriceChange}/>
           <output htmlFor="filterPrice">{minPrice.toFixed(1)}</output>
         </fieldset>
-
 
         <fieldset>
           <legend><h3>Store</h3></legend>
