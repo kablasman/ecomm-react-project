@@ -7,7 +7,7 @@ const Products = ({data}) => {
   
   const [searchState, setSearchState] = useState({
     query: ``,
-    minPrice: 0.0,
+    minPrice: 0,
     sort: (a, b) => a.bookPrice - b.bookPrice
   })
 
@@ -63,12 +63,13 @@ const Products = ({data}) => {
 <div class="result-filters">
         <a><h2>Filter</h2></a>
 
-        <fieldset className="search">
-				  <input type="search" name="search" id="filterResults" autocomplete="off" onChange={handleQueryChange} value={query}/>
-			  </fieldset>
+        <div class="search-div">
+          <fieldset className="search">
+            <input type="search" name="search" id="filterResults" autocomplete="off" onChange={handleQueryChange} value={query}/>
+          </fieldset>
+        </div>
 
         <fieldset>
-          <label for="sort" class="sort">Show</label>
           <select name="sort" id="sort" defaultValue="0" onChange={handleSortChange}>
             <option value="1">Price, highest to lowest</option>
             <option value="0">Price, lowest to highest</option>
@@ -77,7 +78,7 @@ const Products = ({data}) => {
         </fieldset>
 
         <fieldset className="slider">
-          <label htmlFor="filterPrice">Minimum Price:</label>
+          <label htmlFor="filterPrice">Price:</label>
           <input type="range" name="price" id="filterPrice" value={minPrice} min="0" max="30" step="0.1" onChange={handlePriceChange}/>
           <output htmlFor="filterPrice">{minPrice.toFixed(1)}</output>
         </fieldset>
