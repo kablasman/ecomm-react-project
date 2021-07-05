@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from 'img/booknook_logo.svg'
 
 const Header = () => {
 
     return (
       <header className="page-header">
 			<div className="logo">
-				<a href="index.html"> <img src="src/img/booknook_logo.svg" alt="book logo" width="150" /></a>
+				<a href="index.html"> <img src={logo} alt="book logo" width="120" /></a>
 			</div>
 
 			<nav aria-label="Primary" className="navigation">
