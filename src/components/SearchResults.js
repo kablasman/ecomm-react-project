@@ -10,9 +10,9 @@ const SearchResults = ({result}) => {
         <div className="grid-container">
         {theProducts}
 
-        <div id="numStudents">
+        <p id="numProducts">
             {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
-        </div>
+        </p>
         </div>
 
     )
