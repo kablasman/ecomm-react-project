@@ -413,7 +413,7 @@ fieldset .sort {
     background-repeat: no-repeat;
     background-size: 28%;
     background-color: white;
-	padding-left: calc(var(--pad-and-gap)*2);
+	padding-left: 2.5em;
 }
 
 .logo {
