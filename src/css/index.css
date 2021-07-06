@@ -191,8 +191,8 @@ form fieldset legend {
     box-shadow: 0px 0px 3px var(--darker);
 	font-family: var(--banner);
 	width: 100%;
-	padding: 5em 0;
-	padding-bottom: 2em;
+	padding: 6em 0;
+	padding-bottom: 3em;
 }
 
 .navigation {
