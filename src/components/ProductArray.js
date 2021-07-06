@@ -1,15 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const ProductArray = ({data}) => {
 
-    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, bookLabel,
-    bookCategory} = data
+    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage} = data
+
+    const [img, setImg] = useState(``)
+    import (`img/${bookImage}`).then((image) => setImg(image.default))
 
     return (
         <article className="product">
         <header>
             <div className="book-picture">
-                <a href="product.html"><img src={`src/img/${bookImage}`} alt={`{bookTitle}`} /></a>
+                <a href="product.html"><img src={img} alt={`{bookTitle}`} /></a>
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>
