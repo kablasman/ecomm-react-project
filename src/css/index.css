@@ -41,7 +41,6 @@ body {
 }
 
 main {
-    padding: calc(var(--pad-and-gap)*6) 0;
     padding-bottom: calc(var(--pad-and-gap)*3);
 	color: var(--black);   
 }
@@ -173,25 +172,27 @@ form fieldset legend {
 	padding: 0 1em;
 }
 
-.banner {
+/*.banner {
     font-size: 0.7em;
     padding: var(--pad-and-gap);
     padding-top: calc(var(--pad-and-gap)*2);
     background-color: var(--lightorange);
     text-align: center;
-}
+}*/
 
 .heading {
     font-size: 1.8em;
     text-align: center;
-    /*background-image: url(../img/tandem-x-visuals-qluESDgit1U-unsplash.jpg);*/
+    background-image: url(../img/tandem-x-visuals-qluESDgit1U-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding: calc(var(--pad-and-gap)*4) 0;
     color: white;
     text-shadow: 0px 1px 3px var(--darker);
     box-shadow: 0px 0px 3px var(--darker);
 	font-family: var(--banner);
+	width: 100%;
+	padding: 5em 0;
+	padding-bottom: 2em;
 }
 
 .navigation {
@@ -303,13 +304,10 @@ form fieldset legend {
 }
 
 .results {
-    padding: 3em var(--pad-and-gap);
+    padding: 3em 2em;
     max-width: 100em;
     margin: auto;
     margin-bottom: calc(var(--pad-and-gap)*2);
-    margin-top: 1em;
-    /*display: grid;
-    grid-template-columns: 1fr 3fr;*/
 }
 
 .result-filters {
@@ -342,10 +340,6 @@ form fieldset legend {
     padding: 0;
 }
 
-.book-picture img {
-	width: 270px;
-}
-
 .book-picture {
 	text-align: center;
 }
@@ -354,7 +348,7 @@ form fieldset legend {
     padding: var(--pad-and-gap);
     background-color: var(--light-light-mocha);
     border-radius: 0.5em;
-    box-shadow: 0px 0px 0.5em var(--darkmocha);
+	box-shadow: 0px 0px 0.5em var(--darkmocha);
 }*/
 
 .grid-container .product footer {
@@ -594,6 +588,10 @@ fieldset .sort {
 	border: none;
 }
 
+.book-picture img {
+	width: 100%;
+}
+
 .sort {
     padding-right: calc(var(--pad-and-gap)/2);
     font-size: 1.2em;
@@ -786,7 +784,6 @@ fieldset .sort {
 
     .heading {
         margin: 0;
-        padding: calc(var(--pad-and-gap)*4.3);
     }
 
     .filter-options {
@@ -861,7 +858,6 @@ fieldset .sort {
 
     .heading {
         margin: 0;
-        padding: calc(var(--pad-and-gap)*6);
     }
 
     .filter-options {
