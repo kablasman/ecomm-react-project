@@ -8,10 +8,11 @@ const Products = ({data}) => {
   const [searchState, setSearchState] = useState({
     query: ``,
     minPrice: 0,
+    methods: [],
     sort: (a, b) => a.bookPrice - b.bookPrice
   })
 
-  const {query, minPrice, sort} = searchState
+  const {query, minPrice, methods, sort} = searchState
 
   //for slider
 
@@ -29,6 +30,8 @@ const Products = ({data}) => {
   const searchResult = data
     .filter(({bookPrice}) => bookPrice >= minPrice)
     .filter(({bookTitle}) => bookTitle.toUpperCase().includes(query.toUpperCase()))
+    .filter(({store}) => methods.length === 0 || 
+                        store.filter((method) => methods.includes(method)).length > 0)
     .sort(sort)
   
   const handleQueryChange = (event) => {
@@ -57,6 +60,24 @@ const Products = ({data}) => {
     })
   }
 
+  // for checkboxes 
+
+  const handleMethodChange = ({target}) => {
+    // When a check or uncheck a checkbox, add/remove the "value" from the Array
+
+    if (target.checked) {
+      setSearchState({
+        ...searchState,
+        methods: [...searchState.methods, target.value]
+      })
+    } else {
+      setSearchState({
+        ...searchState,
+        methods: searchState.methods.filter((method) => method !== target.value)
+      })
+    }
+  }
+
   return (
     <Layout>
 
@@ -83,24 +104,24 @@ const Products = ({data}) => {
           <output htmlFor="filterPrice">{minPrice.toFixed(1)}</output>
         </fieldset>
 
-        <fieldset>
+        <fieldset onChange={handleMethodChange}>
           <legend><h3>Store</h3></legend>
           <ul class="filter-list">
             <li>
               <label class="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="pickup"/> 
                 <span>Free Pickup Today</span>
               </label>
             </li>
             <li>
               <label class="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="inStore"/> 
                 <span>Available in Store</span>
               </label>
             </li>
             <li>
               <label class="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="ship"/> 
                 <span>Ship to Destination</span>
               </label>
             </li>

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const ProductArray = ({data}) => {
 
-    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage} = data
+    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
 
     const [img, setImg] = useState(``)
     import (`img/${bookImage}`).then((image) => setImg(image.default))
