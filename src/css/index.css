@@ -696,7 +696,7 @@ fieldset .sort {
 
     .page-header {
         display: grid;
-        grid-template-columns: auto 1fr auto auto;
+        grid-template-columns: auto 1fr 1fr auto;
         gap: var(--pad-and-gap);
         justify-items: center;
         padding: calc(var(--pad-and-gap)/5);
@@ -732,7 +732,8 @@ fieldset .sort {
         grid-column-end: 5;
         display: flex;
         flex-direction: column;
-        padding: 0 1em;
+		padding: 0 1em;
+		margin-left: 3.7em;
     }
 
     .navigation {
@@ -741,7 +742,7 @@ fieldset .sort {
         grid-row-start: 1;
         grid-row-end: 1;
         grid-column-start: 2;
-		grid-column-end: 3;
+		grid-column-end: 4;
     }
 
     .navigation ul {
