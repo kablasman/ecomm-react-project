@@ -663,6 +663,8 @@ fieldset .sort {
 
 #numProducts {
 	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 @media screen and (min-width: 28em) {
@@ -693,7 +695,7 @@ fieldset .sort {
         margin: auto;
         grid-column-start: 2;
         grid-column-end: 3;
-    }
+	}
 
     .page-header {
         display: grid;
@@ -802,7 +804,13 @@ fieldset .sort {
         padding-bottom: 0;
         flex-wrap: wrap;
         font-size: 1em;
-    }
+	}
+	
+	#numProducts {
+		text-align: center;
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
 
 }
 
@@ -846,6 +854,12 @@ fieldset .sort {
 	.search-div {
 		padding-bottom: 1em;
 	}
+
+	#numProducts {
+		text-align: center;
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
 }
 
 @media screen and (min-width: 85em) {
@@ -875,7 +889,13 @@ fieldset .sort {
 
     .menu {
         font-size: 1.2em;
-    }
+	}
+	
+	#numProducts {
+		text-align: center;
+		grid-column-start: 2;
+		grid-column-end: 4;
+	}
 
 }
 
