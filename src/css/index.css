@@ -300,11 +300,12 @@ form fieldset legend {
 .filters {
     padding: 0 var(--pad-and-gap);
     max-width: 100em;
-    margin: auto;
+	margin: auto;
+	font-size: 0.8em;
 }
 
 .results {
-    padding: 3em 2em;
+    padding: 2em 2em;
     max-width: 100em;
     margin: auto;
     margin-bottom: calc(var(--pad-and-gap)*2);
@@ -321,6 +322,10 @@ form fieldset legend {
 	grid-row-end: 5;
 	width: 5em;
 	margin-bottom: 2em;
+}
+
+.result-filters h2 {
+	font-size: 1.3em;
 }
 
 .result-filters fieldset {
@@ -513,11 +518,12 @@ fieldset .sort {
     padding-top: var(--pad-and-gap);
     padding-bottom: 0;
     flex-wrap: wrap;
-    max-width: 100em;
+	max-width: 100em;
 }
 
 .filter-options fieldset {
-    padding: calc(var(--pad-and-gap)/2);
+	padding: calc(var(--pad-and-gap)/2);
+	border: none;
 }
 
 .fiction {
@@ -810,7 +816,7 @@ fieldset .sort {
     }
 
     .result-filters {
-        padding: 1.3em 0;
+        padding: 0;
         border: none;
         background-color: var(--mocha);
 		box-shadow: 0px 0px 0px var(--mocha);
