@@ -17,8 +17,7 @@ const Products = ({data}) => {
   //for slider
 
   const handlePriceChange = (event) => {
-    //setMinGpa(Number(event.target.value))
-
+    
     setSearchState({
       ...searchState,
       minPrice: Number(event.target.value),
@@ -81,7 +80,7 @@ const Products = ({data}) => {
   return (
     <Layout>
 
-<div class="result-filters">
+      <div class="result-filters">
         <a><h2>Filter</h2></a>
 
         <div class="search-div">
