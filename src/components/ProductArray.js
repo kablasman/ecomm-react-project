@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const ProductArray = ({data}) => {
 
@@ -11,7 +12,7 @@ const ProductArray = ({data}) => {
         <article className="product">
         <header>
             <div className="book-picture">
-                <a href="product.html"><img src={img} alt={`{bookTitle}`}/></a>
+                <Link to={`/ProductPage/${bookTitle}`}><img src={img} alt={`{bookTitle}`}/></Link>
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>
