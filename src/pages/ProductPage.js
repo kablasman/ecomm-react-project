@@ -1,7 +1,6 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import Layout from 'components/Layout'
-import css from 'src/css'
 
 const ProductPage= () => {
 
