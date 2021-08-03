@@ -1,7 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Products from 'pages/Products' 
+import ProductPage from 'pages/ProductPage'
+// import CartContext from 'contexts/cart'
 
 const App = () => {
+
+  // const [productData, setProductData] = useState({
+  //   products: [],
+  //   loading: true
+  // })
+
+  // const {products, loading} = productData
+
+  // const db = firebase.firestore()
+
+  // useEffect(() => {
+
+  //   setProductData({
+  //     products: [...products],
+  //     loading: true
+  //   })
+
+  //   // connecting to firebase database
+  //   db.collection(`products`).get().then((snapshot) => {
+  //     setProductData({
+  //       products: snapshot.docs.reduce((product, doc) => [...products, doc.data])
+  //     })
+  //   })
+  // })
+
 	const products = [
     {
       bookTitle: 'The King of Drugs',
@@ -185,11 +213,27 @@ const App = () => {
     }
   ]
 
+  // fetch() my cart data, ensure it's on every page
+  const cartData = {
+    quantity: 1,
+    bookImage: `juneate`,
+  }
+
+  const updateCart = (number) => {
+    // Go update the database
+    cartData.quantity = number
+    console.log(`App()`, cartData)
+  }
+
   return (
-    <Products data={products}/>
+    <Router>
+      <Switch>
+        <Route exact path="/"><Products data={products}/></Route>
+        <Route path="/ProductPage"><ProductPage/></Route>
+      </Switch>
+    </Router>
   )
 }
-
 
 // const App = () => {
 
