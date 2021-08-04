@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Products from 'pages/Products' 
 import ProductPage from 'pages/ProductPage'
-// import CartContext from 'contexts/cart'
+import ProductContext from 'contexts/oneproduct'
 
 const App = () => {
 
+  // -------------- FIREBASE CONNECTION ---------------
   // const [productData, setProductData] = useState({
   //   products: [],
   //   loading: true
@@ -213,42 +214,17 @@ const App = () => {
     }
   ]
 
-  // fetch() my cart data, ensure it's on every page
-  const cartData = {
-    quantity: 1,
-    bookImage: `juneate`,
-  }
-
-  const updateCart = (number) => {
-    // Go update the database
-    cartData.quantity = number
-    console.log(`App()`, cartData)
-  }
-
   return (
     <Router>
-      <Switch>
-        <Route exact path="/"><Products data={products}/></Route>
-        <Route path="/ProductPage"><ProductPage/></Route>
-      </Switch>
+      <ProductContext.Provider value = {products}>
+        <Switch>
+          <Route exact path="/"><Products data={products}/></Route>
+          <Route exact path="/ProductPage/:slug"><ProductPage /></Route>
+        </Switch>
+      </ProductContext.Provider>
     </Router>
   )
 }
-
-// const App = () => {
-
-// 	const paletteData = [
-// 		{r:255, g:0, b:0},
-// 		{r:0, g:255, b:0},
-// 		{r:0, g:0, b:255},
-// 	]	
-
-// 	return (
-// 		<main className="app">
-// 			<Palette swatches={}/>
-// 		</main>
-// 	)
-// }
 
 export default App
 

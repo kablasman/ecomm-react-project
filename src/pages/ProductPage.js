@@ -1,27 +1,24 @@
 import React, {useContext} from 'react'
 import {useParams} from 'react-router-dom'
 import Layout from 'components/Layout'
-import ProductArray from 'components/ProductArray'
 import OneProduct from 'components/OneProduct'
-import Products from './Products'
 import ProductContext from 'contexts/oneproduct'
+
 // import {Link} from 'react-router-dom'
 // import Image from 'components/Image'
 
-const ProductPage= ({data}) => {
+const ProductPage= () => {
 
     // assigning url value to slug
     const {slug} = useParams()
     const oneProduct= useContext(ProductContext)
-    // console.log(oneProduct.data)
 
-    // console.log(oneproduct.data)
+    // updating product page with correct book
+    const prod = oneProduct.find((products) => products.bookTitle === slug) 
 
-    const prod = oneProduct.find((prod) => prod.slug === slug) || oneProduct[0]
-    
     return (
         <Layout>
-            {<OneProduct data={prod}/>}
+            <OneProduct data={prod}/>
              {/* <article className="product">
                 <header className="product-container">
                     <figure className="gallery" id="gallery">
