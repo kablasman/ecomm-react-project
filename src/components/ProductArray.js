@@ -1,18 +1,16 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
+import Image from 'components/Image'
 
 const ProductArray = ({data}) => {
 
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
 
-    const [img, setImg] = useState(``)
-    import (`img/${bookImage}`).then((image) => setImg(image.default))
-
     return (
         <article className="product">
         <header>
             <div className="book-picture">
-                <Link to={`/ProductPage/${bookTitle}`}><img src={img} alt={`{bookTitle}`}/></Link>
+                <Link to={`/ProductPage/${bookTitle}`}><Image src={bookImage} alt={`{bookTitle}`} /></Link>
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>
