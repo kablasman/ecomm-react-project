@@ -107,19 +107,19 @@ const Products = ({data}) => {
           <legend><h3>Store</h3></legend>
           <ul class="filter-list">
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox" value="pickup"/> 
                 <span>Free Pickup Today</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox" value="inStore"/> 
                 <span>Available in Store</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox" value="ship"/> 
                 <span>Ship to Destination</span>
               </label>
@@ -130,31 +130,31 @@ const Products = ({data}) => {
           <legend><h3>New</h3></legend>
           <ul class="filter-list">
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Best Books of 2021</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Summer Reads</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>New This Week</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>New This Month</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Trending on #BookTok</span>
               </label>
@@ -165,25 +165,25 @@ const Products = ({data}) => {
           <legend><h3>Bestsellers</h3></legend>
           <ul class="filter-list">
             <li>
-            <label class="my-checkbox">
+            <label className="my-checkbox">
               <input type="checkbox"/> 
               <span>Top 10</span>
             </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Staff Picks</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>NYT Bestsellers</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>G&M Bestsellers</span>
               </label>
@@ -194,7 +194,7 @@ const Products = ({data}) => {
           <legend><h3>Author</h3></legend>
           <ul class="filter-list">
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Harry Potter</span>
               </label>
@@ -206,25 +206,25 @@ const Products = ({data}) => {
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Malcom Gladwell</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Anthony Bourdain</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Stephen King</span>
               </label>
             </li>
             <li>
-              <label class="my-checkbox">
+              <label className="my-checkbox">
                 <input type="checkbox"/> 
                 <span>Academia</span>
               </label>
