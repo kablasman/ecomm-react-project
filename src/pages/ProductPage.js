@@ -1,19 +1,28 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {useParams} from 'react-router-dom'
 import Layout from 'components/Layout'
+import ProductArray from 'components/ProductArray'
+import OneProduct from 'components/OneProduct'
+import Products from './Products'
+import ProductContext from 'contexts/oneproduct'
+// import {Link} from 'react-router-dom'
+// import Image from 'components/Image'
 
-const ProductPage= () => {
+const ProductPage= ({data}) => {
 
-    // storing book parameters (title) as variable
+    // assigning url value to slug
     const {slug} = useParams()
-    // const cart = useContext(CartContext)
+    const oneProduct= useContext(ProductContext)
+    // console.log(oneProduct.data)
 
-    // console.log(cart.data)
-    // cart.updateCartNumber(`roccop`)
+    // console.log(oneproduct.data)
+
+    const prod = oneProduct.find((prod) => prod.slug === slug) || oneProduct[0]
     
     return (
         <Layout>
-            <article className="product">
+            {<OneProduct data={prod}/>}
+             {/* <article className="product">
                 <header className="product-container">
                     <figure className="gallery" id="gallery">
                         <img src="img/action-thriller-book-cover-design-template-3675ae3e3ac7ee095fc793ab61b812cc_screen.jpg" alt="book image" id="img1" class="gallery-img active" width="100%" />
@@ -25,8 +34,8 @@ const ProductPage= () => {
                     </figure>
                 </header>
                 <div className="product-info">
-                <h3></h3>
-                <h4>by Nora Barrett</h4>
+                <h3>{prod}</h3>
+                <h4>by{bookAuthor}</h4>
                 <data><del>$27.74</del> <ins>$13.72</ins></data>
                 <dl>
                 <dt>Rating</dt>
@@ -65,7 +74,7 @@ const ProductPage= () => {
                     <button className="favourites" type="button"><span className="material-icons"></span>Add to Favourites</button>
                 </footer>
                 </div>
-            </article>
+            </article>  */}
         </Layout>
     )
 }
