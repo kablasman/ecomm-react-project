@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
 import Image from 'components/Image'
+import ProductContext from 'contexts/oneproduct'
 
 const ProductArray = ({data}) => {
 
-    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
+    const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data 
 
     return (
         <article className="product">
