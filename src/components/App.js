@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext} from 'react'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Products from 'pages/Products' 
 import ProductPage from 'pages/ProductPage'
 import ProductContext from 'contexts/oneproduct'
+import CartContext from 'contexts/cartpage'
+import CartPage from 'pages/CartPage'
 
 const App = () => {
 
@@ -23,7 +25,7 @@ const App = () => {
   //     loading: true
   //   })
 
-  //   // connecting to firebase database
+  // connecting to firebase database
   //   db.collection(`products`).get().then((snapshot) => {
   //     setProductData({
   //       products: snapshot.docs.reduce((product, doc) => [...products, doc.data])
@@ -214,13 +216,31 @@ const App = () => {
     }
   ]
 
+  const [cart, setCart] = useState([])
+
+  const addToCart = () => {
+    const cartPage = products.filter(product => product.bookTitle)
+    
+    setCart([...cart, cartPage])
+  }
+
+  const viewProduct = () => {
+    const productPage = products.filter(product => product.bookTitle)
+    return (
+      productPage
+    )
+  }
+
   return (
     <Router>
-      <ProductContext.Provider value = {products}>
+      <ProductContext.Provider value = {{data:products, viewProduct:viewProduct, cart:cart, addToCart:addToCart}}>
+        {/* <CartContext.Provider value ={{data:products}}> */}
         <Switch>
           <Route exact path="/"><Products data={products}/></Route>
           <Route exact path="/ProductPage/:slug"><ProductPage /></Route>
+          <Route exact path="/CartPage"><CartPage /></Route>
         </Switch>
+        {/* </CartContext.Provider> */}
       </ProductContext.Provider>
     </Router>
   )
