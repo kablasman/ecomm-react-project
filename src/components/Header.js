@@ -14,7 +14,7 @@ const Header = () => {
     return (
       <header className="page-header">
 			<div className="logo">
-				<a href="index.html"> <img src={logo} alt="book logo" width="120" /></a>
+				<Link to={'/'}><img src={logo} alt="book logo" width="120" /></Link>
 			</div>
 
 			<nav aria-label="Primary" className="navigation">
@@ -22,7 +22,7 @@ const Header = () => {
 					<a href="#"><img src={menuToggle} alt="toggle menu" width="31" /></a>
 				</div>
 				<ul className="menu">
-					<li><a href="index.html">Home</a></li>
+					<li><Link to={'/'}>Home</Link></li>
 					<li><a href="#">Books</a>
 						<ul className="submenu">
 							<li><a href="#">Shop All</a></li>
