@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from 'img/booknook_logo.svg'
 import menuToggle from 'img/menu-toggle.svg'
+import {Link} from 'react-router-dom'
+import ProductContext from 'contexts/oneproduct'
+import CartContents from 'components/CartContents'
 
 const Header = () => {
+
+	const cartProduct= useContext(ProductContext)
+	const cartPage = cartProduct.cart
+	const updateCart = cartPage.map((product) => <CartContents key={product.bookTitle} data={product} />)
 
     return (
       <header className="page-header">
@@ -33,7 +40,7 @@ const Header = () => {
 		
 			<ul className="your-products">
 				<li><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">favorite</span></a></li>
-				<li className="cart"><a href="#" className="bag"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>0</span></a></li>
+				<Link to={`/CartPage`} className="bag"><li className="cart"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>{updateCart.length}</span></li></Link>
 			</ul>
 		</header>
 	)
