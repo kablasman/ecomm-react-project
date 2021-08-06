@@ -5,8 +5,7 @@ import ProductContext from 'contexts/oneproduct'
 const CartContents = ({data}) => {
 
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
-    // const cartProduct = useContext(UserContext)
-
+    
     return (
         <article className="cart-product">
             <header className="product-container">
