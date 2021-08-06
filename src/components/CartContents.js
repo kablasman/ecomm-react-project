@@ -1,11 +1,10 @@
 import React from 'react'
 import Image from 'components/Image'
-import ProductContext from 'contexts/oneproduct'
 
 const CartContents = ({data}) => {
 
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
-    
+
     return (
         <article className="cart-product">
             <header className="product-container">
