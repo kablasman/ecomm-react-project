@@ -41,7 +41,7 @@ const Header = () => {
 				</ul>
 			</nav>
 			<ul className="your-products">
-				<li><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">favorite</span></a></li>
+				<Link to={'/FavPage'} className="fav"><li><span className="material-icons" aria-label="Favourites">favorite</span></li></Link>
 				<Link to={`/CartPage`} className="bag"><li className="cart"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>{updateCart.length}</span></li></Link>
 			</ul>
 		</header>
