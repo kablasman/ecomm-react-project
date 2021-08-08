@@ -7,6 +7,9 @@ const ProductArray = ({data}) => {
 
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data 
 
+    const homeCartProduct = useContext(ProductContext)
+    const addingToCart= homeCartProduct.addToCart
+
     return (
         <article className="product">
         <header>
@@ -18,7 +21,7 @@ const ProductArray = ({data}) => {
             <data value="39"><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
         </header>
         <footer>
-        <button type="button" class="add-cart"><span class="material-icons"></span>Add to Cart</button>
+        <button type="button" class="add-cart" onClick={addingToCart}><span class="material-icons"></span>Add to Cart</button>
         </footer>   
         </article>
     )
