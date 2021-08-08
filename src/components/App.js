@@ -5,6 +5,7 @@ import ProductPage from 'pages/ProductPage'
 import ProductContext from 'contexts/oneproduct'
 import CartContext from 'contexts/cartpage'
 import CartPage from 'pages/CartPage'
+import FavPage from 'pages/FavPage'
 
 const App = () => {
 
@@ -260,6 +261,7 @@ const App = () => {
           <Route exact path="/"><Products data={products}/></Route>
           <Route exact path="/ProductPage/:slug"><ProductPage /></Route>
           <Route exact path="/CartPage"><CartPage /></Route>
+          <Route exact path="/FavPage"><FavPage /></Route>
         </Switch>
         {/* </CartContext.Provider> */}
       </ProductContext.Provider>
