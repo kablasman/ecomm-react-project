@@ -1,18 +1,22 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Image from 'components/Image'
+import ProductContext from "contexts/oneproduct"
 
 const CartContents = ({data}) => {
 
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
 
+    const deleteProduct = useContext(ProductContext)
+    const deletingFromCart= deleteProduct.deleteFromCart
+
     return (
         <article className="cart-product">
             <header className="product-container">
-                <figure className="gallery" id="gallery">
-                    <Image src={bookImage} alt={bookTitle} />
+                <figure className="cart-img">
+                    <Image src={bookImage} alt={bookTitle}/>
                 </figure>
             </header>
-            <div className="product-info">
+            <div className="cart-product-info">
                 <h3>{bookTitle}</h3>
                 <h4>by {bookAuthor}</h4>
                 <data>${bookPrice}</data>
@@ -44,6 +48,7 @@ const CartContents = ({data}) => {
                     </fieldset>
                 </form> */}
             </div>
+            <button className="favourites" type="button" onClick={deletingFromCart}><span className="material-icons"></span>Remove Item</button>
         </article> 
     )
 }
