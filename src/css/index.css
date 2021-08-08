@@ -78,6 +78,7 @@ nav ul li ul {
 }
 
 button {
+    font-family: var(--font);
     border-radius: 2em;
     background-color: white;
     box-shadow: 0px 1px 3px var(--darkermocha);
@@ -260,6 +261,12 @@ form fieldset legend {
     padding-top: var(--pad-and-gap);
 }
 
+.footer-cart {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
 .footer-resize {
     padding-top: var(--pad-and-gap);
     font-size: 1.4em;
@@ -345,8 +352,86 @@ form fieldset legend {
     padding: 0;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 4em;
+    padding-top: 10em;
+}
+
+.product-info {
+    padding: 1em 2em;
+}
+
+form fieldset{
+    border: 0;
+    padding: 0;
+}
+
+.add-cart {
+    width: 80%;
+}
+
+.favourites {
+    width: 80%;
+}
+
+.product-footer {
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.product-info-1 ul {
+    list-style-type: none;
+}
+
+.cart-product-info {
+    text-align: left;
+}
+
+.product-img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 93%;
+}
+
+.author-img {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 99%;
+}
+
 .book-picture {
 	text-align: center;
+}
+
+.cart-product {
+    margin: auto;
+    width: 20em;
+}
+
+.cart-page {
+    height: 100vh;
+    padding-top: 10em;
+    text-align: center;
+}
+.cart-img img {
+    width: 70%;
+}
+
+.login-data {
+    color: var(--darkorange);
+}
+
+.pagination-text {
+    padding: 1em;
+}
+
+.pag-bttn {
+    width: 1.5em;
+    border-radius: 0.4em;
+    padding: 0;
+    text-align: center;
 }
 
 /*.grid-container .product {
@@ -445,6 +530,7 @@ fieldset .sort {
 
 .bag {
     color: var(--black);
+    text-decoration: none;
 }
 
 .cart {
@@ -857,8 +943,8 @@ fieldset .sort {
 
 	#numProducts {
 		text-align: center;
-		grid-column-start: 2;
-		grid-column-end: 3;
+		grid-column-start: 1;
+		grid-column-end: 4;
 	}
 }
 
