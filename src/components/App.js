@@ -216,24 +216,45 @@ const App = () => {
     }
   ]
 
+  const userData = {
+    username: 'kablasman'
+  }
+
+  const updateUsername = (name) => {
+    userData.username = name;
+  }
+
   const [cart, setCart] = useState([])
 
   const addToCart = () => {
-    const cartPage = products.filter(product => product.bookTitle)
-    
-    setCart([...cart, cartPage])
+    const cartPage = products.find((product) => product.bookTitle === product.bookTitle)
+    return (
+      setCart([...cart, cartPage])
+    )
+  }
+
+  // on click do not include this product
+  const deleteFromCart = () => {
+    const delCartPage = cart.filter((product) => product.bookTitle !== product.bookTitle)
+    return (
+      setCart([...delCartPage])
+    )
   }
 
   const viewProduct = () => {
-    const productPage = products.filter(product => product.bookTitle)
+    const productPage = products.filter((product) => product.bookTitle === product.bookTitle)
     return (
       productPage
     )
   }
 
+  // const cartTotal = () => {
+
+  // }
+
   return (
     <Router>
-      <ProductContext.Provider value = {{data:products, viewProduct:viewProduct, cart:cart, addToCart:addToCart}}>
+      <ProductContext.Provider value = {{data:products, data:userData, updateUsername:updateUsername, viewProduct:viewProduct, cart:cart, addToCart:addToCart, deleteFromCart:deleteFromCart}}>
         {/* <CartContext.Provider value ={{data:products}}> */}
         <Switch>
           <Route exact path="/"><Products data={products}/></Route>
