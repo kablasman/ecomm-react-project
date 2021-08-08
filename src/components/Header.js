@@ -7,7 +7,9 @@ import CartContents from 'components/CartContents'
 
 const Header = () => {
 
+	const {data} = useContext(ProductContext)
 	const cartProduct= useContext(ProductContext)
+
 	const cartPage = cartProduct.cart
 	const updateCart = cartPage.map((product) => <CartContents key={product.bookTitle} data={product} />)
 
@@ -35,9 +37,9 @@ const Header = () => {
 					</li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
+					<li className="login-data">{data.username}</li>
 				</ul>
 			</nav>
-		
 			<ul className="your-products">
 				<li><a href="#" className="fav"><span className="material-icons" aria-label="Favourites">favorite</span></a></li>
 				<Link to={`/CartPage`} className="bag"><li className="cart"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>{updateCart.length}</span></li></Link>
