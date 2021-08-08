@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
 import {useParams} from 'react-router-dom'
 import Layout from 'components/Layout'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
 import OneProduct from 'components/OneProduct'
 import ProductContext from 'contexts/oneproduct'
 
@@ -12,12 +14,14 @@ const ProductPage = () => {
     const productPage = oneProduct.viewProduct(slug)
 
     // updating product page with correct book
-    const prod = productPage.find((products) => products.bookTitle === slug)
+    const prod = productPage.find((product) => product.bookTitle === slug)
 
     return (
-        <Layout>
-            <OneProduct data={prod}/>
-        </Layout>
+        <div>
+            <Header />
+                <OneProduct data={prod}/>
+            <Footer />
+        </div>
     )
 }
 
