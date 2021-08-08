@@ -3,14 +3,24 @@ import ProductArray from 'components/ProductArray'
 
 const SearchResults = ({result}) => {
 
-    // const pageSize = 20;
-    // const [currentPage, setCurrentPage] = useState(1);
-    // const totalSize = 20;
+    // ------------- PAGINATION -------------
+    const pageSize = 10;
+    const [currentPage, setCurrentPage] = useState([1]);
 
-    // const productStart = (currentPage - 1) * pageSize
-    // const productEnd = productStart + pageSize
+    const firstList = (currentPage - 1) * pageSize
+    const lastList = firstList + pageSize
+    const totalPages = Math.ceil(result.length / pageSize)
 
-    const theProducts = result.slice(0,20).map((product) => <ProductArray key={product.bookTitle} data={product} />)
+    const updatePage = (page) => {
+        if (page < 0) 
+          setCurrentPage(1)
+        else if (page > totalPages) 
+          setCurrentPage(totalPages)
+        else 
+          setCurrentPage(page)
+    }
+
+    const theProducts = result.slice(firstList,lastList).map((product) => <ProductArray key={product.bookTitle} data={product} />)
 
     return (
 
@@ -18,7 +28,16 @@ const SearchResults = ({result}) => {
         {theProducts}
 
         <p id="numProducts">
-            {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length}
+            {/* {theProducts.length} {(theProducts.length === 1) ? `product` : `products`} of {result.length} */}
+            <button onClick={()=> updatePage(currentPage-1)} disabled={(currentPage === 1 )?`disabled`:``} className="pag-bttn">
+            <span className="material-icons">navigate_before</span>
+            </button>
+            <span className="pagination-text">
+                {(theProducts.length === 1) ? `Product` : `Products`} {firstList + 1} to {Math.min(lastList, result.length)} of {result.length}
+            </span>
+            <button onClick={()=> updatePage(currentPage+1)} disabled={(currentPage === totalPages )?`disabled`:``} className="pag-bttn">
+            <span className="material-icons">navigate_next</span>
+            </button>
         </p>
         </div>
 
