@@ -238,7 +238,7 @@ const App = () => {
   const deleteFromCart = () => {
     const delCartPage = cart.filter((product) => product.bookTitle !== product.bookTitle)
     return (
-      setCart([...delCartPage])
+      setCart(delCartPage)
     )
   }
 
