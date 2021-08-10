@@ -89,7 +89,7 @@ button {
     padding: calc(var(--pad-and-gap)/2);
     align-items: center;
     border: none;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 button:hover {
@@ -262,9 +262,8 @@ form fieldset legend {
 }
 
 .footer-cart {
+    margin-top: 1em;
     width: 100vw;
-    bottom: 0;
-    position: absolute;
 }
 
 .footer-resize {
@@ -406,7 +405,7 @@ form fieldset{
     /* grid-column-start: 1;
     grid-column-end: 3; */
     width: 70%;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 .product-container {
@@ -414,12 +413,35 @@ form fieldset{
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--mocha);
     padding: 1em;
+    padding-bottom: 0;
     box-shadow: 0px 1px 7px var(--darkermocha);
     border-radius: 1.5em;
     margin: 0 auto;
     width: 90%;
     margin-bottom: 2em;
     max-width: 50em;
+}
+
+.return {
+    text-align: center;
+    padding: 4.5em;
+    position: initial;
+}
+
+.return button {
+    width: 35%;
+}
+
+.checkout-bttn {
+    width: 90%;
+}
+
+.cart-bag img {
+    color: var(--darkmocha);
+    margin: 5.5em;
+    width: 25%;
+    max-width: 10em;
+    min-width: 5em;
 }
 
 .product-img {
@@ -468,7 +490,7 @@ form fieldset{
 .shopping-cart-h1 {
     text-align: left;
     padding: 0 2em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 }
 
 /* .cart-img img {
@@ -829,7 +851,7 @@ fieldset .sort {
     } */
 
     .cart-bttn {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .cart-product-info {
