@@ -11,16 +11,17 @@ const FavPage = () => {
     const updateCart = cartPage.map((product) => <CartContents key={product.bookTitle} data={product} />)
     
     return (
-    <section>
+    <article className="layout-cart">
         <Header />
         <div className="cart-page">
+            <h1 className="shopping-cart-h1">Favourites</h1>
             {/* if products in cart are equal to 0 then update with statement */}
-            {updateCart.length > 0 ? updateCart: 'There are no items in your favourites.'}
+            {updateCart.length > 0 ? updateCart: 'There are no items in your cart.'}
         </div>
         <div className="footer-cart">
             <Footer />
         </div>
-    </section>
+    </article>
     )
 }
 
