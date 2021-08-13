@@ -38,12 +38,15 @@ html {
 body {
 	background-color: var(--mocha);
     margin: 0;
-    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 main {
     padding-bottom: calc(var(--pad-and-gap)*3);
-	color: var(--black);   
+    color: var(--black);   
+    flex: 1;
 }
 
 h1 {
@@ -224,7 +227,7 @@ form fieldset legend {
     background-size: cover;
     background-repeat: no-repeat;
     padding: var(--pad-and-gap);
-	padding-top: calc(var(--pad-and-gap)*1.5);
+    padding-top: calc(var(--pad-and-gap)*1.5);
 }
 
 .page-footer ul {
