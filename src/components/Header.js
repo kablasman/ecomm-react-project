@@ -16,7 +16,7 @@ const Header = () => {
     return (
       <header className="page-header">
 			<div className="logo">
-				<Link to={'/'}><img src={logo} alt="book logo" width="120" /></Link>
+				<Link to={'/'}><img src={logo} alt="book logo" width="90" /></Link>
 			</div>
 
 			<nav aria-label="Primary" className="navigation">
