@@ -21,7 +21,7 @@ const ProductArray = ({data}) => {
             <data value="39"><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
         </header>
         <footer>
-        <button type="button" class="add-cart" onClick={addingToCart}><span class="material-icons"></span>Add to Cart</button>
+        <button type="button" class="add-cart" onClick={() => addingToCart(bookTitle)}><span class="material-icons"></span>Add to Cart</button>
         </footer>   
         </article>
     )
