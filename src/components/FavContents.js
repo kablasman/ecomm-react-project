@@ -19,7 +19,7 @@ const FavContents = ({data}) => {
             <div className="cart-product-info">
                 <h3>{bookTitle}</h3>
                 <h4>by {bookAuthor}</h4>
-                <data>${bookPrice}</data>
+                <data value={bookPrice}>${bookPrice}</data>
             </div>
             <button className="favourites" type="button" onClick={deletingFromCart}><span className="material-icons"></span>Remove Item</button>
         </article> 

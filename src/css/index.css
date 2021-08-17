@@ -523,6 +523,15 @@ form fieldset{
 	box-shadow: 0px 0px 0.5em var(--darkmocha);
 }*/
 
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product header {
+    flex-grow: 1;
+}
+
 .grid-container .product footer {
     text-align: center;
 }
@@ -846,7 +855,7 @@ fieldset .sort {
 }
 
 .my-checkbox > input:hover {
-    background-image: url(../img/checkbox.svg);
+    background-color: var(--darkorange);
     background-repeat: no-repeat;
     background-size: cover;
     border: none;

@@ -100,7 +100,7 @@ const Products = ({data}) => {
         <fieldset className="slider">
           <label htmlFor="filterPrice">Price:</label>
           <input type="range" name="price" id="filterPrice" value={minPrice} min="0" max="30" step="0.1" onChange={handlePriceChange}/>
-          <output htmlFor="filterPrice">{minPrice.toFixed(1)}</output>
+          <output htmlFor="filterPrice">${minPrice.toFixed(2)}</output>
         </fieldset>
 
         <fieldset onChange={handleMethodChange}>

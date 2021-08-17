@@ -257,9 +257,9 @@ const App = () => {
         {/* <CartContext.Provider value ={{data:products}}> */}
         <Switch>
           <Route exact path="/"><Products data={productData}/></Route>
-          <Route exact path="/ProductPage/:slug"><ProductPage /></Route>
-          <Route exact path="/CartPage"><CartPage /></Route>
-          <Route exact path="/FavPage"><FavPage /></Route>
+          <Route exact path="/productpage/:slug"><ProductPage /></Route>
+          <Route exact path="/cartpage"><CartPage /></Route>
+          <Route exact path="/favpage"><FavPage /></Route>
         </Switch>
         {/* </CartContext.Provider> */}
       </ProductContext.Provider>

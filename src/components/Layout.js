@@ -14,22 +14,22 @@ const Layout = ({children}) => {
                 <hr />
                 <div class="filter-options">
                 <fieldset>
-                    <legend className="fiction"><h2>Fiction</h2></legend>
+                    <legend className="fiction"><a href="#"><h2>Fiction</h2></a></legend>
                 </fieldset>
                 <fieldset>
-                    <legend className="non-fiction"><h2>Non-fiction</h2></legend>
+                    <legend className="non-fiction"><a href="#"><h2>Non-fiction</h2></a></legend>
                 </fieldset>
                 <fieldset>
-                    <legend className="wellness"><h2>Health/Wellness</h2></legend>
+                    <legend className="wellness"><a href="#"><h2>Health/Wellness</h2></a></legend>
                 </fieldset>
                 <fieldset>
-                    <legend className="teens"><h2>Teens/Pre-teens</h2></legend>
+                    <legend className="teens"><a href="#"><h2>Teens/Pre-teens</h2></a></legend>
                 </fieldset>
                 <fieldset>
-                    <legend className="kids"><h2>Kids 6-12</h2></legend>
+                    <legend className="kids"><a href="#"><h2>Kids 6-12</h2></a></legend>
                 </fieldset>
                 <fieldset>
-                    <legend className="popularity"><h2>Popularity</h2></legend>
+                    <legend className="popularity"><a href="#"><h2>Popularity</h2></a></legend>
                 </fieldset>
                 </div>
                 <hr />

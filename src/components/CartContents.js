@@ -19,7 +19,7 @@ const CartContents = ({data}) => {
                 <div className="cart-product-info">
                     <h3>{bookTitle}</h3>
                     <h4>by {bookAuthor}</h4>
-                    <data><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
+                    <data value={bookPrice}><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
                 </div>
                 <div className="cart-quantity">
                     <button type="button" className="cart-bttn" onClick={() => deletingFromCart(data.bookImage)}>Remove</button>
