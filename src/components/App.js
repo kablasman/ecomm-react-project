@@ -227,8 +227,8 @@ const App = () => {
 
   const [cart, setCart] = useState([])
 
-  const addToCart = () => {
-    const cartPage = products.find((product) => product.bookTitle === product.bookTitle)
+  const addToCart = (titleToSearch) => {
+    const cartPage = products.find((product) => product.bookTitle === titleToSearch)
     return (
       setCart([...cart, cartPage])
     )
