@@ -18,11 +18,7 @@ const CartPage = () => {
         <Header />
         <div className="cart-page">
             <h1 className="shopping-cart-h1">Shopping Bag</h1>
-            {/* if products in cart are equal to 0 then update with statement */}
             {updateCart.length > 0 ? updateCart: 'There are no items in your bag.'}
-            {/* <div className="return">
-                <Link to="/"><button>Return to Shop</button></Link>
-            </div> */}
         </div>
         <div className="footer-cart">
             <Footer />

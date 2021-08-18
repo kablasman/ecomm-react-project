@@ -15,7 +15,6 @@ const FavPage = () => {
         <Header />
         <div className="cart-page">
             <h1 className="shopping-cart-h1">Favourites</h1>
-            {/* if products in cart are equal to 0 then update with statement */}
             {updateFav.length > 0 ? updateFav: 'There are no items in your favourites.'}
         </div>
         <div className="footer-cart">
