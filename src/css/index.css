@@ -46,7 +46,7 @@ body {
 main {
     padding-bottom: calc(var(--pad-and-gap)*3);
     color: var(--black);   
-    flex: 1;
+    margin: 0;
 }
 
 h1 {
@@ -267,6 +267,7 @@ form fieldset legend {
 .footer-cart {
     margin-top: 1em;
     width: 100vw;
+    flex: 0;
 }
 
 .footer-resize {
@@ -488,6 +489,7 @@ form fieldset{
 .cart-page {
     padding-top: 7em;
     text-align: center;
+    flex-grow: 1;
 }
 
 .shopping-cart-h1 {
@@ -528,9 +530,9 @@ form fieldset{
     flex-direction: column;
 }
 
-.product header {
+/* .product header {
     flex-grow: 1;
-}
+} */
 
 .grid-container .product footer {
     text-align: center;
@@ -540,11 +542,11 @@ form fieldset{
     margin: 1em 0;
 }
 
-/* .layout-cart {
-    display: grid;
-    grid-template-rows: 3fr 1fr;
+.layout-cart {
+    display: flex;
     min-height: 100vh;
-} */
+    flex-direction: column;
+} 
 
 .find {
     position: relative;
