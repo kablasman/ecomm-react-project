@@ -5,7 +5,7 @@ const Banner = () => {
 
         <div>
             <header className="heading">
-                <h1>50% off all bestsellers</h1>
+                <h1> 20% off summer sale!</h1>
             </header>
         </div>
 
