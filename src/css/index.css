@@ -304,7 +304,8 @@ form fieldset legend {
     font-family: var(--font);
     max-width: 40em;
 	margin: auto;
-	list-style-type: none;
+    list-style-type: none;
+    font-size: 0.8em;
 }
 
 .filters {
@@ -360,6 +361,11 @@ form fieldset legend {
     grid-template-columns: 1fr 1fr;
     padding: 0 4em;
     padding-top: 10em;
+}
+
+.product-page-container {
+    max-width: 60em;
+    margin: auto;
 }
 
 /* .product-container {
@@ -530,9 +536,9 @@ form fieldset{
     flex-direction: column;
 }
 
-/* .product header {
+.product header {
     flex-grow: 1;
-} */
+}
 
 .grid-container .product footer {
     text-align: center;
@@ -578,7 +584,7 @@ fieldset .sort {
 }
 
 .slider {
-	width: 60%;
+	width: 12em;
 }
 
 #filterPrice {
@@ -586,7 +592,7 @@ fieldset .sort {
 }
 
 #filterResults {
-    width: 14.6em;
+    width: 14.7em;
     height: 2.5em;
     border-radius: 4em;
     border: none;
@@ -633,7 +639,7 @@ fieldset .sort {
     color: var(--red);
 	font-family: var(--logo);
     margin-left: 3em;
-    padding-top: 1.2em;
+    padding-top: 1.5em;
 }
 
 .your-products {
@@ -645,7 +651,7 @@ fieldset .sort {
 	flex-direction: row;
 	list-style-type: none;
 	padding-top: 1em;
-	padding: 0;
+    padding: 0;
 }
 
 .fav {
@@ -952,7 +958,7 @@ fieldset .sort {
         padding-left: var(--pad-and-gap);
 		padding-top: calc(var(--pad-and-gap)/2);
         margin-left: 0.1em;
-        padding-top: 0.8em;
+        padding-top: 1em;
     }
 
     .find {
@@ -1125,10 +1131,6 @@ fieldset .sort {
         font-size: 1.2em;
     }
 
-    .menu {
-        font-size: 1.2em;
-	}
-	
 	#numProducts {
 		text-align: center;
 		grid-column-start: 2;

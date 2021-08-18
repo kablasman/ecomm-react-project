@@ -11,7 +11,7 @@ const OneProduct = ({data}) => {
     const addingToCart= cartProduct.addToCart
 
     return (
-        <div>
+        <div class="product-page-container">
             <div id="gallery" className="gallery">
                 <Image src={bookImage} alt={`{bookTitle}`} className="product-img" />
                 <img src={AuthorImg} alt="author image" id="img2" className="author-img" />
