@@ -26,7 +26,7 @@
     --violet: #e0b7f0;
     --greyed-out: #7e7363;
     --font:  'DM Sans', sans-serif;
-    --banner: 'Changa One', cursive;
+    --banner: 'DM Sans', sans-serif;
     --pad-and-gap: 1em;
 }	
 
@@ -185,14 +185,14 @@ form fieldset legend {
 }*/
 
 .heading {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align: center;
     background-image: url(../img/tandem-x-visuals-qluESDgit1U-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-color:rgba(81, 81, 81, 0.7);
+    background-blend-mode: multiply;
     color: white;
-    text-shadow: 0px 1px 3px var(--darker);
-    box-shadow: 0px 0px 3px var(--darker);
 	font-family: var(--banner);
 	width: 100%;
 	padding: 6em 0;
