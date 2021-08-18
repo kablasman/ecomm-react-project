@@ -6,6 +6,7 @@ import ProductContext from 'contexts/oneproduct'
 import CartContext from 'contexts/cartpage'
 import CartPage from 'pages/CartPage'
 import FavPage from 'pages/FavPage'
+import FourOhFour from 'pages/FourOhFour'
 import firebase from 'utils/firebase'
 
 const App = () => {
@@ -79,22 +80,17 @@ const App = () => {
     )
   }
 
-  // const cartTotal = () => {
-
-  // }
-
   return (
     <Router>
       { loading && <div className="loading"><span className="animate-loader">Loading...</span></div> }
       <ProductContext.Provider value = {{data:productData, data:userData, updateUsername:updateUsername, viewProduct:viewProduct, cart:cart, fav:fav, addToCart:addToCart, addToFav:addToFav, deleteFromCart:deleteFromCart, deleteFromFav:deleteFromFav}}>
-        {/* <CartContext.Provider value ={{data:products}}> */}
         <Switch>
           <Route exact path="/"><Products data={productData}/></Route>
           <Route exact path="/productpage/:slug"><ProductPage /></Route>
           <Route exact path="/cartpage"><CartPage /></Route>
           <Route exact path="/favpage"><FavPage /></Route>
+          <Route exact path="*"><FourOhFour /></Route>
         </Switch>
-        {/* </CartContext.Provider> */}
       </ProductContext.Provider>
     </Router>
   )
