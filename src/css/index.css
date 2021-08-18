@@ -446,14 +446,6 @@ form fieldset{
     width: 90%;
 }
 
-.cart-bag img {
-    color: var(--darkmocha);
-    margin: 5.5em;
-    width: 25%;
-    max-width: 10em;
-    min-width: 5em;
-}
-
 .product-img {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -496,6 +488,7 @@ form fieldset{
     padding-top: 7em;
     text-align: center;
     flex-grow: 1;
+    padding-bottom: 3em;
 }
 
 .shopping-cart-h1 {
