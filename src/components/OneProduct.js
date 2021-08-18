@@ -58,7 +58,7 @@ const OneProduct = ({data}) => {
                     </fieldset>
                 </form>
                 <footer className="product-footer">
-                    <button type="button" className="add-cart" onClick={addingToCart}><span className="material-icons"></span>Add to Cart</button><br></br>
+                    <button type="button" className="add-cart" onClick={() => addingToCart(bookTitle)}><span className="material-icons"></span>Add to Cart</button><br></br>
                     <button className="favourites" type="button"><span className="material-icons"></span>Add to Favourites</button>
                 </footer>
             </div>

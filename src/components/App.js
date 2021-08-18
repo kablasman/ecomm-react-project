@@ -224,16 +224,16 @@ const App = () => {
 
   const [cart, setCart] = useState([])
 
-  const addToCart = () => {
-    const cartPage = productData.find((product) => product.bookTitle === product.bookTitle)
+  const addToCart = (titleToSearch) => {
+    const cartPage = productData.find((product) => product.bookTitle === titleToSearch)
     return (
       setCart([...cart, cartPage])
     )
   }
 
   // on click do not include this product
-  const deleteFromCart = () => {
-    const delCartPage = cart.filter((product) => product.bookTitle !== product.bookTitle)
+  const deleteFromCart = (titleToDelete) => {
+    const delCartPage = cart.filter((product) => product.bookTitle !== titleToDelete)
     return (
       setCart(delCartPage)
     )
