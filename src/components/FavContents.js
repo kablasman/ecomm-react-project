@@ -7,22 +7,24 @@ const FavContents = ({data}) => {
     const {bookTitle, bookAuthor, oldPrice, bookPrice, bookRating, bookImage, store} = data
 
     const deleteProduct = useContext(ProductContext)
-    // const deletingFromFav= deleteProduct.deleteFromFav
+    const deletingFromFav = deleteProduct.deleteFromFav
 
     return (
-        <article className="cart-product">
-            <header className="product-container">
-                <figure className="cart-img">
+        <article>
+            <section className="product-container">
+                <div className="cart-product">
                     <Image src={bookImage} alt={bookTitle}/>
-                </figure>
-            </header>
-            <div className="cart-product-info">
-                <h3>{bookTitle}</h3>
-                <h4>by {bookAuthor}</h4>
-                <data value={bookPrice}>${bookPrice}</data>
-            </div>
-            <button className="favourites" type="button" onClick={deletingFromCart}><span className="material-icons"></span>Remove Item</button>
-        </article> 
+                </div> 
+                <div className="cart-product-info">
+                    <h3>{bookTitle}</h3>
+                    <h4>by {bookAuthor}</h4>
+                    <data value={bookPrice}><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
+                </div>
+                <div className="cart-quantity">
+                    <button type="button" className="cart-bttn" onClick={() => deletingFromFav(bookTitle)}>Remove</button>
+                </div>
+            </section>
+        </article>
     )
 }
 

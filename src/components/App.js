@@ -231,11 +231,27 @@ const App = () => {
     )
   }
 
+  const [fav, setFav] = useState([])
+
+  const addToFav= (titleToSearch) => {
+    const favPage = productData.find((product) => product.bookTitle === titleToSearch)
+    return (
+      setFav([...fav, favPage])
+    )
+  }
+
   // on click do not include this product
   const deleteFromCart = (titleToDelete) => {
     const delCartPage = cart.filter((product) => product.bookTitle !== titleToDelete)
     return (
       setCart(delCartPage)
+    )
+  }
+
+  const deleteFromFav = (titleToDelete) => {
+    const delFavPage = fav.filter((product) => product.bookTitle !== titleToDelete)
+    return (
+      setFav(delFavPage)
     )
   }
 
@@ -253,7 +269,7 @@ const App = () => {
   return (
     <Router>
       { loading && <div className="loading"><span className="animate-loader">Loading...</span></div> }
-      <ProductContext.Provider value = {{data:productData, data:userData, updateUsername:updateUsername, viewProduct:viewProduct, cart:cart, addToCart:addToCart, deleteFromCart:deleteFromCart}}>
+      <ProductContext.Provider value = {{data:productData, data:userData, updateUsername:updateUsername, viewProduct:viewProduct, cart:cart, fav:fav, addToCart:addToCart, addToFav:addToFav, deleteFromCart:deleteFromCart, deleteFromFav:deleteFromFav}}>
         {/* <CartContext.Provider value ={{data:products}}> */}
         <Switch>
           <Route exact path="/"><Products data={productData}/></Route>

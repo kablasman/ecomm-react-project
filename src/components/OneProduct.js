@@ -10,6 +10,9 @@ const OneProduct = ({data}) => {
     const cartProduct = useContext(ProductContext)
     const addingToCart= cartProduct.addToCart
 
+    const favProduct = useContext(ProductContext)
+    const addingToFav= favProduct.addToFav
+
     return (
         <div class="product-page-container">
             <div id="gallery" className="gallery">
@@ -59,7 +62,7 @@ const OneProduct = ({data}) => {
                 </form>
                 <footer className="product-footer">
                     <button type="button" className="add-cart" onClick={() => addingToCart(bookTitle)}><span className="material-icons"></span>Add to Cart</button><br></br>
-                    <button className="favourites" type="button"><span className="material-icons"></span>Add to Favourites</button>
+                    <button className="favourites" type="button" onClick={() => addingToFav(bookTitle)}><span className="material-icons"></span>Add to Favourites</button>
                 </footer>
             </div>
         </div> 
