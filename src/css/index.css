@@ -631,7 +631,7 @@ fieldset .sort {
     text-decoration: none;
     color: var(--red);
 	font-family: var(--logo);
-    margin-left: 3em;
+    margin-left: 4.2em;
     padding-top: 1.5em;
 }
 
@@ -650,11 +650,13 @@ fieldset .sort {
 .fav {
     color: var(--darkorange);
     text-decoration: none;
+    font-size: 0.85em;
 }
 
 .bag {
     color: var(--black);
     text-decoration: none;
+    font-size: 1em;
 }
 
 .cart {
