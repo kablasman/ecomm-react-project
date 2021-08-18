@@ -656,6 +656,7 @@ fieldset .sort {
 
 .fav {
     color: var(--darkorange);
+    text-decoration: none;
 }
 
 .bag {
