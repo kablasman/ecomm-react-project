@@ -14,7 +14,7 @@ const ProductArray = ({data}) => {
         <article className="product">
         <header>
             <div className="book-picture">
-                <Link to={`/ProductPage/${bookTitle}`}><Image src={bookImage} alt={`{bookTitle}`} /></Link>
+                <Link to={`/productpage/${bookTitle}`}><Image src={bookImage} alt={`{bookTitle}`} /></Link>
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>

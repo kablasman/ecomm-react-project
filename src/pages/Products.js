@@ -9,10 +9,12 @@ const Products = ({data}) => {
     query: ``,
     minPrice: 0,
     methods: [],
+    methodsNew: [],
+    methodsBest: [],
     sort: (a, b) => a.bookPrice - b.bookPrice
   })
 
-  const {query, minPrice, methods, sort} = searchState
+  const {query, minPrice, methods, methodsNew, methodsBest, sort} = searchState
 
   //for slider
 
@@ -29,8 +31,9 @@ const Products = ({data}) => {
   const searchResult = data
     .filter(({bookPrice}) => bookPrice >= minPrice)
     .filter(({bookTitle}) => bookTitle.toUpperCase().includes(query.toUpperCase()))
-    .filter(({store}) => methods.length === 0 || 
-                        store.filter((method) => methods.includes(method)).length > 0)
+    .filter(({store}) => methods.length === 0 || store.filter((method) => methods.includes(method)).length > 0)
+    .filter(({newFilter}) => methodsNew.length === 0 || newFilter.filter((methodNew) => methodsNew.includes(methodNew)).length > 0)
+    .filter(({bestFilter}) => methodsBest.length === 0 || bestFilter.filter((methodBest) => methodsBest.includes(methodBest)).length > 0)
     .sort(sort)
   
   const handleQueryChange = (event) => {
@@ -59,10 +62,9 @@ const Products = ({data}) => {
     })
   }
 
-  // for checkboxes 
-
+  //--------------- for checkboxes --------------------
+  // filter for store
   const handleMethodChange = ({target}) => {
-    // When a check or uncheck a checkbox, add/remove the "value" from the Array
 
     if (target.checked) {
       setSearchState({
@@ -73,6 +75,38 @@ const Products = ({data}) => {
       setSearchState({
         ...searchState,
         methods: searchState.methods.filter((method) => method !== target.value)
+      })
+    }
+  }
+
+  // filter for new 
+  const handleMethodNewChange = ({target}) => {
+
+    if (target.checked) {
+      setSearchState({
+        ...searchState,
+        methodsNew: [...searchState.methodsNew, target.value]
+      })
+    } else {
+      setSearchState({
+        ...searchState,
+        methodsNew: searchState.methodsNew.filter((methodNew) => methodNew !== target.value)
+      })
+    }
+  }
+
+  // filter for bestsellers
+  const handleMethodBestChange = ({target}) => {
+
+    if (target.checked) {
+      setSearchState({
+        ...searchState,
+        methodsBest: [...searchState.methodsBest, target.value]
+      })
+    } else {
+      setSearchState({
+        ...searchState,
+        methodsBest: searchState.methodsBest.filter((methodBest) => methodBest !== target.value)
       })
     }
   }
@@ -93,7 +127,6 @@ const Products = ({data}) => {
           <select name="sort" id="sort" defaultValue="0" onChange={handleSortChange}>
             <option value="1">Price, highest to lowest</option>
             <option value="0">Price, lowest to highest</option>
-            <option value="newest">Newest releases</option>
           </select>
         </fieldset>
 
@@ -126,65 +159,65 @@ const Products = ({data}) => {
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset onChange={handleMethodNewChange}>
           <legend><h3>New</h3></legend>
           <ul class="filter-list">
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="best"/> 
                 <span>Best Books of 2021</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="summer"/> 
                 <span>Summer Reads</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="week"/> 
                 <span>New This Week</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="month"/> 
                 <span>New This Month</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="booktok"/> 
                 <span>Trending on #BookTok</span>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset onChange={handleMethodBestChange}>
           <legend><h3>Bestsellers</h3></legend>
           <ul class="filter-list">
             <li>
             <label className="my-checkbox">
-              <input type="checkbox"/> 
+              <input type="checkbox" value="top"/> 
               <span>Top 10</span>
             </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="staff"/> 
                 <span>Staff Picks</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="nyt"/> 
                 <span>NYT Bestsellers</span>
               </label>
             </li>
             <li>
               <label className="my-checkbox">
-                <input type="checkbox"/> 
+                <input type="checkbox" value="gm"/> 
                 <span>G&M Bestsellers</span>
               </label>
             </li>
