@@ -4,14 +4,19 @@ import menuToggle from 'img/menu-toggle.svg'
 import {Link} from 'react-router-dom'
 import ProductContext from 'contexts/oneproduct'
 import CartContents from 'components/CartContents'
+import FavContents from 'components/FavContents'
 
 const Header = () => {
 
 	const {data} = useContext(ProductContext)
-	const cartProduct= useContext(ProductContext)
+	const cartProduct = useContext(ProductContext)
+	const favProduct = useContext(ProductContext)
 
 	const cartPage = cartProduct.cart
+	const favPage = favProduct.fav
+
 	const updateCart = cartPage.map((product) => <CartContents key={product.bookTitle} data={product} />)
+	const updateFav = favPage.map((product) => <FavContents key={product.bookTitle} data={product} />)
 
     return (
       <header className="page-header">
@@ -41,8 +46,8 @@ const Header = () => {
 				</ul>
 			</nav>
 			<ul className="your-products">
-				<Link to={'/FavPage'} className="fav"><li><span className="material-icons" aria-label="Favourites">favorite</span></li></Link>
-				<Link to={`/CartPage`} className="bag"><li className="cart"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>{updateCart.length}</span></li></Link>
+				<Link to={'/favpage'} className="fav"><li><span className="material-icons" aria-label="Favourites">favorite</span><span>{updateFav.length}</span></li></Link>
+				<Link to={`/cartpage`} className="bag"><li className="cart"><div className="material-icons" aria-label="Add to bag">shopping_bag</div><span>{updateCart.length}</span></li></Link>
 			</ul>
 		</header>
 	)
