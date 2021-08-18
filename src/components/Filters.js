@@ -97,47 +97,6 @@ const Filters = () => {
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend><h3>Author</h3></legend>
-          <ul class="filter-list">
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Harry Potter</span>
-              </label>
-            </li>
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Bridgerton</span>
-              </label>
-            </li>
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Malcom Gladwell</span>
-              </label>
-            </li>
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Anthony Bourdain</span>
-              </label>
-            </li>
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Stephen King</span>
-              </label>
-            </li>
-            <li>
-              <label class="my-checkbox">
-                <input type="checkbox"/> 
-                <span>Academia</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
       </div>
   )
 }

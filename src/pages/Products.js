@@ -190,7 +190,8 @@ const Products = ({data}) => {
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        {/*removing because none of these authors are of these books}
+        {/* <fieldset>
           <legend><h3>Author</h3></legend>
           <ul class="filter-list">
             <li>
@@ -230,7 +231,7 @@ const Products = ({data}) => {
               </label>
             </li>
           </ul>
-        </fieldset>
+        </fieldset> */}
       </div>
 
       <SearchResults result={searchResult}/>
