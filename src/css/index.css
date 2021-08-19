@@ -652,6 +652,11 @@ fieldset .sort {
     padding-top: 1.5em;
 }
 
+.products {
+    max-width: 80em;
+    margin: auto;
+}
+
 .your-products {
     grid-row-start: 1;
     grid-row-end: 1;
