@@ -374,7 +374,7 @@ form fieldset legend {
 } */
 
 .product-info {
-    padding: 1em 2em;
+    padding: 1em 4em;
 }
 
 form fieldset{
@@ -825,7 +825,7 @@ fieldset .sort {
 }
 
 .book-picture img {
-	width: 92%;
+	width: 100%;
 }
 
 .sort {
