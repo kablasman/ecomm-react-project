@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -10,12 +10,12 @@
     --light-light-mocha: #fffaef;
     --lightmocha: #fff8e9;
     --mocha:		#fff0d5;
-    --darkmocha: #f0d8aa;
-    --darkermocha: #cfb077;
-    --darker: #aa8a59;
+    --darkmocha: #f4dcb1;
+    --darkermocha: #e7d0a6;
+    --darker: #c19f6d;
     --black: #000;
-    --lightorange: #FFB866;
-    --darkorange: #ff9419;
+    --lightorange: #493a2a;
+    --darkorange: #60bfd2;
     --red: #F5604C;
     --pink: #f599a8;
     --beige: #ecb562;
@@ -25,8 +25,8 @@
     --gold: #ffcf20;
     --violet: #e0b7f0;
     --greyed-out: #7e7363;
-    --font:  'DM Sans', sans-serif;
-    --banner: 'DM Sans', sans-serif;
+    --font:  'Jost', sans-serif;
+    --banner: 'Jost', sans-serif;
     --pad-and-gap: 1em;
 }	
 
@@ -83,9 +83,9 @@ nav ul li ul {
 
 button {
     font-family: var(--font);
-    border-radius: 2em;
-    background-color: white;
-    box-shadow: 0px 1px 3px var(--darkermocha);
+    border-radius: 3em;
+    background-color: #fcfaf3;
+    box-shadow: 0px 1px 1px var(--darkermocha);
     color: var(--black);
     margin-top: var(--pad-and-gap);
     margin-bottom: var(--pad-and-gap);
@@ -132,7 +132,7 @@ data del {
 data ins {
     text-decoration: none;
     font-size: 1.5em;
-    color: var(--darkorange);
+    color: black;
 }
 
 dl dt {
@@ -187,16 +187,17 @@ form fieldset legend {
 .heading {
     font-size: 1.5em;
     text-align: center;
-    background-image: url(../img/tandem-x-visuals-qluESDgit1U-unsplash.jpg);
+    background-image: url(../img/jordan-mcqueen-9QW35wZhZpg-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color:rgba(81, 81, 81, 0.7);
+    background-position: center;
+    background-color:rgba(162, 162, 162, 0.7);
     background-blend-mode: multiply;
     color: white;
 	font-family: var(--banner);
-	width: 100%;
-	padding: 6em 0;
-	padding-bottom: 2em;
+    width: 100%;
+	padding: 8em 0;
+    padding-bottom: 3.6em;
 }
 
 .navigation {
@@ -224,8 +225,6 @@ form fieldset legend {
 
 .page-footer {
     background-color: var(--darkorange);
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: var(--pad-and-gap);
     padding-top: calc(var(--pad-and-gap)*1.5);
 }
@@ -325,18 +324,19 @@ form fieldset legend {
 .result-filters {
     align-content: center;
     border: none;
-    box-shadow: 0px 1px 3px var(--darkermocha);
-    background-color: white;
-    padding: 0.5em var(--pad-and-gap);
-    border-radius: 2em;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    padding: 0.5em 0;
+    border-radius: 0;
     grid-row-start: 1;
 	grid-row-end: 5;
-	width: 5em;
-	margin-bottom: 2em;
+	width: 2em;
+    margin-bottom: 2em;
 }
 
 .result-filters h2 {
-	font-size: 1.3em;
+    font-size: 1.1em;
+    text-align: center;
 }
 
 .result-filters fieldset {
@@ -383,11 +383,11 @@ form fieldset{
 }
 
 .add-cart {
-    width: 80%;
+    width: 100%;
 }
 
 .favourites {
-    width: 80%;
+    width: 100%;
 }
 
 .product-footer {
@@ -425,7 +425,7 @@ form fieldset{
     padding: 1em;
     padding-bottom: 0;
     box-shadow: 0px 1px 7px var(--darkermocha);
-    border-radius: 1.5em;
+    border-radius: 1.2em;
     margin: 0 auto;
     width: 90%;
     margin-bottom: 2em;
@@ -541,6 +541,7 @@ form fieldset{
 .product {
     display: flex;
     flex-direction: column;
+    padding: 0.6em;
 }
 
 .product header {
@@ -591,24 +592,26 @@ fieldset .sort {
 }
 
 .slider {
-	width: 12em;
+    width: 12em;
 }
 
 #filterPrice {
-	width: 100%;
+    width: 100%;
+    color: white;
 }
+
 
 #filterResults {
     width: 14.7em;
     height: 2.5em;
-    border-radius: 4em;
+    border-radius: 3em;
     border: none;
-    box-shadow: 0px 1px 3px var(--darkermocha);
 	background-image: url(../img/search_bar.svg);
     background-repeat: no-repeat;
     background-size: 19%;
-    background-color: white;
-	padding-left: 2.5em;
+    background-color: #fcfaf3;
+    padding-left: 2.5em;
+    box-shadow: 0px 1px 1px var(--darkermocha);
 }
 
 .loading {
@@ -818,11 +821,11 @@ fieldset .sort {
 }
 
 .book-picture {
-	border: none;
+    border: none;
 }
 
 .book-picture img {
-	width: 100%;
+	width: 92%;
 }
 
 .sort {
@@ -833,10 +836,10 @@ fieldset .sort {
 }
 
 #sort {
-    background-color: white;
+    background-color: transparent;
     border-radius: 2em;
     border: none;
-    box-shadow: 0px 1px 3px var(--darkermocha);
+    /* box-shadow: 0px 1px 3px var(--darkermocha); */
     font: var(--font);
     padding: 0.3em 0.2em;
     margin-bottom: 1.2em;
@@ -854,15 +857,15 @@ fieldset .sort {
 }
 
 .my-checkbox > input {
-    height: 1em;
-    width: 1em;
+    height: 0.9em;
+    width: 0.9em;
     -webkit-appearance: none;
     -moz-appearance: none;
     -o-appearance: none;
     border: none;
-    box-shadow: 0px 1px 2px var(--darker);
     background-color: white;
-    border-radius: 0.33em;
+    border-radius: 0.3em;
+    box-shadow: 0px 1px 1px var(--darkermocha);
 }
 
 .my-checkbox > input:checked {
@@ -873,7 +876,7 @@ fieldset .sort {
 }
 
 .my-checkbox > input:hover {
-    background-color: var(--darkorange);
+    background-color: #1b7f0d;
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -1090,6 +1093,8 @@ fieldset .sort {
 
     .result-filters h2 {
         padding-bottom: calc(var(--pad-and-gap)/2);
+        text-align: left;
+        font-size: 1.2em;
     }
 
     .result-filters fieldset {
@@ -1135,6 +1140,7 @@ fieldset .sort {
 
     .heading {
         margin: 0;
+        padding-bottom: 4em;
     }
 
     .filter-options {

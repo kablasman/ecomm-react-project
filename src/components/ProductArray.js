@@ -18,7 +18,7 @@ const ProductArray = ({data}) => {
             </div>
             <h3>{bookTitle}</h3>
             <h4>by {bookAuthor}</h4>
-            <data value="39"><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
+            <data value=""><del>${oldPrice}</del> <ins>${bookPrice}</ins></data>
         </header>
         <footer>
         <button type="button" class="add-cart" onClick={() => addingToCart(bookTitle)}><span class="material-icons"></span>Add to Cart</button>
