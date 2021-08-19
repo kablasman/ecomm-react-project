@@ -517,10 +517,18 @@ form fieldset{
 }
 
 .pag-bttn {
-    width: 1.5em;
+    width: 0.9em;
+    height: 1em;
     border-radius: 0.4em;
     padding: 0;
     text-align: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.pag-bttn:hover {
+    background-color: transparent;
+    color: var(--darkorange);
 }
 
 /*.grid-container .product {
