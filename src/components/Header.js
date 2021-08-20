@@ -30,7 +30,7 @@ const Header = () => {
 				</div>
 				<ul className="menu">
 					<li><Link to={'/'}>Home</Link></li>
-					<li><a href="#">Books</a>
+					<li><Link to={'/'}>Books</Link>
 						<ul className="submenu">
 							<li><a href="#">Shop All</a></li>
 							<li><a href="#">New/Hot</a></li>

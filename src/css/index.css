@@ -1016,6 +1016,10 @@ fieldset .sort {
         padding: calc(var(--pad-and-gap)/2);
     }
 
+    .menu {
+        font-size: 1em;
+    }
+
     .menu-toggle {
         display: none;
     }
